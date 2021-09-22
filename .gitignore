@@ -1,0 +1,71 @@
+# Dependencies
+node_modules
+
+# Logs
+npm-debug.log
+
+# Nuxt Build
+.nuxt
+version.txt
+version.html
+lastcommit.txt
+
+output/
+
+# Nuxt Generate
+dist
+.env
+.env.local
+
+build/
+yarn-error.log
+/.project
+
+# Service Worker
+sw.*
+
+# IDE Specific
+.idea/
+
+# JEST Coverage
+coverage
+
+# Junk Files
+.DS_Store
+static/.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+#Kubelize
+deploy/_output
+out/
+
+# plugins
+*.vtpw.ts
+static/version.json
+.eslintcache
+credentials.json
+sam.json
+token.json
+
+# new Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

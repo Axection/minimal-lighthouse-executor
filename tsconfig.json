@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es2018",
+    "module": "CommonJS",
+    "skipDefaultLibCheck": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "outDir": "./output",
+    "allowJs": true,
+    "noEmit": true,
+    "sourceMap": true,
+    // Strict configs - changed later when ready
+    "strict": false,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "types": ["node"],
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "resolveJsonModule": true,
+    "declaration": true,
+    "isolatedModules": true,
+    "paths": {
+      "~/*": ["./*.d.ts", "./*/index.{ts,js}", "./*"],
+      "@/*": ["./*.d.ts", "./*/index.{ts,js}", "./*"]
+    }
+  },
+
+  "exclude": ["node_modules", "dist", "build", "static", "coverage", ".vscode", "tsbuild"]
+}

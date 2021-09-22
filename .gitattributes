@@ -1,0 +1,7 @@
+/.yarn/releases/** binary
+/.yarn/plugins/** binary
+
+* text=auto
+* text eol=lf
+*.zip binary
+.pnp.js linguist-vendored
