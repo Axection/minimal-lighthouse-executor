@@ -4,7 +4,7 @@ This repo includes a very minimal lighthouse runner via typescript `ts-node`. To
 
 ## Getting started
 
-Take a look into `index.ts`, and modify the these two to suit your needs
+Take a look into `index.ts`, and modify the these two to suit your needs:
 
 ```typescript
 const url = 'https://www.google.com';
