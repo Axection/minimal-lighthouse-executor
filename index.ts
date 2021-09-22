@@ -4,9 +4,12 @@ import { Launcher } from 'chrome-launcher';
 import { connect } from 'puppeteer-core';
 import lighthouse from 'lighthouse/lighthouse-core';
 
+const url = 'https://www.google.com';
+const chromePath = '\\chromium\\chrome.exe'; // or usually /usr/bin/chromium-browser
+
 async function start() {
   const chrome = new Launcher({
-    chromePath: '\\chromium\\chrome.exe', // or wherever you place the executable
+    chromePath,
     chromeFlags: ['--no-sandbox', '--disable-dev-shm-usage', '--headless', 'in-process-gpu'], // param solution from this thread
     logLevel: 'info'
   });
@@ -18,7 +21,7 @@ async function start() {
     browserWSEndpoint: details.data.webSocketDebuggerUrl, // puppeteer consume the debugger url
   });
   const options = { logLevel: 'info', hostname: 'localhost', port: new URL(browser.wsEndpoint()).port };
-  const runnerResult: RunnerResult = await lighthouse('https://mitra.bukalapak.com', options);
+  const runnerResult: RunnerResult = await lighthouse(url, options);
   // do some data processing with runnerResult
   console.log(runnerResult.lhr);
 
